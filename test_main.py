@@ -16,5 +16,5 @@ def test_root():
 def test_ws():
     with client.websocket_connect("/ws") as ws:
         ws.send_text("hello")
-        response == ws.receive_text()
+        response = ws.receive_text()
         assert response == "Echo: hello"
